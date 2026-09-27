@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-h: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-charcoal-800 font-body antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-heading uppercase tracking-wide;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold uppercase tracking-wide transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-safety-500 text-white hover:bg-safety-600;
+  }
+
+  .btn-secondary {
+    @apply btn bg-steel-700 text-white hover:bg-steel-800;
+  }
+
+  .btn-outline {
+    @apply btn border border-steel-300 bg-white text-steel-800 hover:bg-steel-50;
+  }
+
+  .btn-ghost {
+    @apply btn text-steel-700 hover:bg-steel-50;
+  }
+
+  .input {
+    @apply w-full rounded-md border border-charcoal-200 bg-white px-3 py-2.5 text-sm text-charcoal-800 placeholder:text-charcoal-400 focus:border-steel-500 focus:outline-none focus:ring-2 focus:ring-steel-100;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-charcoal-500;
+  }
+
+  .card {
+    @apply rounded-lg border border-charcoal-100 bg-white shadow-card;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+}
